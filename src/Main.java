@@ -30,7 +30,7 @@ public class Main
 
         /* ----------------------------------------------------------------------- */
 
-        System.out.println("Zgadnij liczbę");
+        System.out.println("Zgadnij liczbę");       //sout
 
         Scanner klawiatura = new Scanner(System.in);        // SCANNER - wpisywanie wartości
 
@@ -38,7 +38,13 @@ public class Main
 
         //////////////////// PĘTLA FOR ///////////////////
 
-        for (int i = 0; i < 10; i++)
+                            // fori
+
+        //////////////////// PĘTLA WHILE ///////////////////
+
+        wpisanaLiczba = klawiatura.nextInt();           // przy WHILE musi być wcześniej zainicjowana zmienna
+
+        while(wpisanaLiczba != losowanaLiczba)
         {
 
             wpisanaLiczba = klawiatura.nextInt();
@@ -67,7 +73,7 @@ public class Main
         /*
         else
         {
-            ////////////////////////// SPRAWDZANIE LICZBY (IF skrócony //////////////
+            //////////////////// SPRAWDZANIE LICZBY (IF skrócony //////////////
 
             int roznica = losowanaLiczba > wpisanaLiczba ? losowanaLiczba - wpisanaLiczba : wpisanaLiczba - losowanaLiczba;
 
