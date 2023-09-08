@@ -32,9 +32,23 @@ public class Main
 
         System.out.println("Zgadnij liczbę");
 
-        Scanner klawiatura = new Scanner(System.in);
-
+        Scanner klawiatura = new Scanner(System.in);        // SCANNER - wpisywanie wartości
         int wpisanaLiczba = klawiatura.nextInt();
+
         System.out.println("Wpisano: "+wpisanaLiczba);
+
+        if(losowanaLiczba == wpisanaLiczba)
+        {
+
+            System.out.println("Gratulacje");
+
+        }
+        else
+        {
+            int roznica = losowanaLiczba > wpisanaLiczba ? losowanaLiczba - wpisanaLiczba : wpisanaLiczba - losowanaLiczba ;
+            System.out.println("Bruh");
+            System.out.println("Pomyliłeś się o: "+roznica);
+
+        }
     }
 }
