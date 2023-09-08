@@ -40,23 +40,15 @@ public class Main
 
                             // fori
 
-        //////////////////// PĘTLA WHILE ///////////////////
+        //////////////////// PĘTLA DO-WHILE ///////////////////
 
-        wpisanaLiczba = klawiatura.nextInt();           // przy WHILE musi być wcześniej zainicjowana zmienna
-
-        while(wpisanaLiczba != losowanaLiczba)
+        do
         {
 
             wpisanaLiczba = klawiatura.nextInt();
             System.out.println("Wpisano: " + wpisanaLiczba);
 
-            if (losowanaLiczba == wpisanaLiczba)
-            {
-                System.out.println("Gratulacje");
-                break;
-            }
-
-            else if (losowanaLiczba < wpisanaLiczba)
+             if(losowanaLiczba < wpisanaLiczba)
             {
 
                 System.out.println("Za duża wartość...");
@@ -69,7 +61,13 @@ public class Main
                 System.out.println("Za mało!");
 
             }
+
         }
+        while(wpisanaLiczba != losowanaLiczba);
+        System.out.println("Gratulacje, udało Ci się! ");
+
+        ///////////////////////////////////////////////////////////////////////////////////////
+
         /*
         else
         {
