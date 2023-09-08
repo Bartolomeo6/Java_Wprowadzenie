@@ -26,29 +26,56 @@ public class Main
 
          */
 
-        System.out.println("WYLOSOWANA LICZBA: "+losowanaLiczba); // wypisywanie
+        /* System.out.println("WYLOSOWANA LICZBA: "+losowanaLiczba); // wypisywanie */
 
         /* ----------------------------------------------------------------------- */
 
         System.out.println("Zgadnij liczbę");
 
         Scanner klawiatura = new Scanner(System.in);        // SCANNER - wpisywanie wartości
-        int wpisanaLiczba = klawiatura.nextInt();
 
-        System.out.println("Wpisano: "+wpisanaLiczba);
+        int wpisanaLiczba;
 
-        if(losowanaLiczba == wpisanaLiczba)
+        //////////////////// PĘTLA FOR ///////////////////
+
+        for (int i = 0; i < 10; i++)
         {
 
-            System.out.println("Gratulacje");
+            wpisanaLiczba = klawiatura.nextInt();
+            System.out.println("Wpisano: " + wpisanaLiczba);
 
+            if (losowanaLiczba == wpisanaLiczba)
+            {
+                System.out.println("Gratulacje");
+                break;
+            }
+
+            else if (losowanaLiczba < wpisanaLiczba)
+            {
+
+                System.out.println("Za duża wartość...");
+
+            }
+
+            else
+            {
+
+                System.out.println("Za mało!");
+
+            }
         }
+        /*
         else
         {
+            ////////////////////////// SPRAWDZANIE LICZBY (IF skrócony //////////////
+
             int roznica = losowanaLiczba > wpisanaLiczba ? losowanaLiczba - wpisanaLiczba : wpisanaLiczba - losowanaLiczba;
 
-            //dzielenie całkowite
-            roznica /= 10;
+            /////////////////////// dzielenie całkowite ///////////////////////////
+
+                                       roznica /= 10;
+
+            ///////////////////////// WYRAŻENIE SWITCH ////////////////////////////////
 
             System.out.println
             (
@@ -64,6 +91,9 @@ public class Main
                  }
 
             );
+            */
+
+            ///////////////////////////// SWITCH - NORMALNY //////////////////////////////
 
             /*switch(roznica)
             {
@@ -85,9 +115,9 @@ public class Main
 
             }*/
 
-            System.out.println("Bruh");
+            /*System.out.println("Bruh");
             System.out.println("Pomyliłeś się o: "+roznica);
 
-        }
+        }*/
     }
 }
