@@ -45,7 +45,31 @@ public class Main
         }
         else
         {
-            int roznica = losowanaLiczba > wpisanaLiczba ? losowanaLiczba - wpisanaLiczba : wpisanaLiczba - losowanaLiczba ;
+            int roznica = losowanaLiczba > wpisanaLiczba ? losowanaLiczba - wpisanaLiczba : wpisanaLiczba - losowanaLiczba;
+
+            //dzielenie całkowite
+            roznica /= 10;
+
+            switch(roznica)
+            {
+
+                case 0:
+                    System.out.println("Close ONE!");
+                    break;
+
+                case 1:
+                    System.out.println("No nieźle");
+                    break;
+
+                case 2:
+                    System.out.println("Całkiem, całkiem...");
+                    break;
+
+                default:
+                    System.out.println("Spróbuj jeszcze raz!");
+
+            }
+
             System.out.println("Bruh");
             System.out.println("Pomyliłeś się o: "+roznica);
 
