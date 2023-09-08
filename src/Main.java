@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main
 {
     public static void main(String[] args) {  /* psvm - haxy */
@@ -10,8 +12,6 @@ public class Main
         System.out.println("Losowanie liczby całkowitej z zakresu 1-100");
         int losowanaLiczba = (int)(Math.random()*100+1); /* Math.random() losuje liczbę z zakresu <0;1) */
 
-        System.out.println("WYLOSOWANA LICZBA: "+losowanaLiczba); // wypisywanie
-
         /*
         TYPY PROSTE:
         - byte, short, int, long -> całkowite
@@ -22,8 +22,19 @@ public class Main
         char
 
         rzutowanie rozszerzające - domyślne
-        rzutowanie
+        rzutowanie zawężające z double (int)
 
          */
+
+        System.out.println("WYLOSOWANA LICZBA: "+losowanaLiczba); // wypisywanie
+
+        /* ----------------------------------------------------------------------- */
+
+        System.out.println("Zgadnij liczbę");
+
+        Scanner klawiatura = new Scanner(System.in);
+
+        int wpisanaLiczba = klawiatura.nextInt();
+        System.out.println("Wpisano: "+wpisanaLiczba);
     }
 }
