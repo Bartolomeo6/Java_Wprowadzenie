@@ -50,7 +50,22 @@ public class Main
             //dzielenie całkowite
             roznica /= 10;
 
-            switch(roznica)
+            System.out.println
+            (
+
+                 switch (roznica)
+                 {
+
+                     case 0 -> "Close ONE!";
+                     case 1 -> "No nieźle";
+                     case 2 -> "Całkiem, całkiem...";
+                     default -> "Spróbuj jeszcze raz!";
+
+                 }
+
+            );
+
+            /*switch(roznica)
             {
 
                 case 0:
@@ -68,7 +83,7 @@ public class Main
                 default:
                     System.out.println("Spróbuj jeszcze raz!");
 
-            }
+            }*/
 
             System.out.println("Bruh");
             System.out.println("Pomyliłeś się o: "+roznica);
